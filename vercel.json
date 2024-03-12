@@ -1,0 +1,21 @@
+{
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.6.0"
+    }
+  },
+  "routes": [{ "src": "/", "dest": "/api/index.php" },
+    { "src": "/naver.php", "dest": "/api/naver.php" },
+    { "src": "/naver2.php", "dest": "/api/naver2.php" },
+    { "src": "/team.php", "dest": "/api/team.php" },
+    { "src": "/skor.php", "dest": "/api/skor.php" },
+    { "src": "/poinf.php", "dest": "/api/poinf.php" },
+    { "src": "/poinm.php", "dest": "/api/poinm.php" },
+    { "src": "/poinf2.php", "dest": "/api/poinf2.php" },
+    { "src": "/com.php", "dest": "/api/com.php" },
+    { "src": "/klasemen.php", "dest": "/api/klasemen.php" },
+    { "src": "/stat.php", "dest": "/api/stat.php" },
+    { "src": "/player.php", "dest": "/api/player.php" },
+    { "src": "/hasil.php", "dest": "/api/hasil.php" }
+  ]
+}
