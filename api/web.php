@@ -71,7 +71,7 @@ table, th, td {
 <body style="font-family:Verdana;">
 
 <div style="background-color:#e5e511;padding:15px;text-align:center;">
-  <h1>WELCOME TO THE JUNGLE<a href=http://saweria.co/agratv target=_blank>http://saweria.co/agratv</a></h1>
+  <h1>WELCOME TO THE JUNGLE<br><a href=http://saweria.co/agratv target=_blank>http://saweria.co/agratv</a></h1>
 </div>
 
 <div style="overflow:auto">
