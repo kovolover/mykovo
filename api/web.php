@@ -66,21 +66,7 @@ table, th, td {
   font-size: 12px;
 }
 </style>
-<script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P2T1FHWMDY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
 
-  gtag("config", "G-P2T1FHWMDY");
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3571022434446314"
-     crossorigin="anonymous"></script>
 </head>
 <body style="font-family:Verdana;">
 
