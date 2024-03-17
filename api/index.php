@@ -33,8 +33,11 @@ for($i=0;$i<$jumlah;$i++)
     $kategori=$json['result']['templates'][0]['json']['liveBoxList'][$i]['superCategoryId'];
     $gameid=$json['result']['templates'][0]['json']['liveBoxList'][$i]['gameId'];
     $jam=$json['result']['templates'][0]['json']['liveBoxList'][$i]['gameTimeHHmm'];
+    //echo "<a href='?id=$gameid'>$judul - $kategori - $jam</a><br>";
+    $onair=$json['result']['templates'][0]['json']['liveBoxList'][$i]['isOnAirTv'];
+    if($onair =="Y" || $onair =="N"){
     echo "<a href='?id=$gameid'>$judul - $kategori - $jam</a><br>";
-    
+    }
     
 }
 echo "<p>";
