@@ -99,7 +99,7 @@ $team = array(
 "1093" => "3rd Reg f",
 "1092" => "2ns Reg m"
 );
-//$jsonall=json_decode(file_get_contents("jadwal.json"),true);
+//$jsonall=json_decode(file_get_contents("schedule.json"),true);
 $jsonall=json_decode(file_get_contents("https://api.kovo.co.kr/api/game/vleague/schedule?season=020"),true);
 $jumlah=count($jsonall['result']);
 echo "<table>";
@@ -116,7 +116,8 @@ echo "<table>";
 		$dateg= $jsonall['result'][$a]['date'];
 		$ganti=str_replace("-","",$dateg);
 		$gender= $jsong['result']['gender'];
-		if($num % 2==1){$kodegender="020M";}else{$kodegender="020F";};
+		if($num <253){if($num % 2==1){$kodegender="020M";}else{$kodegender="020F";}};
+		if($num >253){if($num % 2==1){$kodegender="020F";}else{$kodegender="020M";}};
 		$games=$ganti.$kodegender.$num;
 		$nonton="?game=".$games;
 		$fhd="?fhd=".$games;
