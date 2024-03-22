@@ -267,23 +267,23 @@ $data="
 251,1004,1006,2024-03-17
 252,2006,2003,2024-03-17
 253,2093,2095,2024-03-20
-254,1093,1095,2024-03-21
-255,2092,2096,2024-03-22
-256,1092,1096,2024-03-23
-257,2096,2092,2024-03-24
-258,1096,1092,2024-03-25
-259,2092,2096,2024-03-26
-260,1092,1096,2024-03-27
-261,2091,2094,2024-03-28
-262,1091,1094,2024-03-29
-263,2091,2094,2024-03-30
-264,1091,1094,2024-03-31
-265,2094,2091,2024-04-01
-266,1094,1091,2024-04-02
-267,2094,2091,2024-04-03
-268,1094,1091,2024-04-04
-269,2091,2094,2024-04-05
-270,1091,1094,2024-04-06";
+254,1008,1005,2024-03-21
+255,2004,2003,2024-03-22
+256,1009,1008,2024-03-23
+257,2003,2004,2024-03-24
+258,1008,1009,2024-03-25
+259,2004,2003,2024-03-26
+260,1009,1008,2024-03-27
+261,2001,2094,2024-03-28
+262,1001,1094,2024-03-29
+263,2001,2094,2024-03-30
+264,1001,1094,2024-03-31
+265,2094,2001,2024-04-01
+266,1094,1001,2024-04-02
+267,2094,2001,2024-04-03
+268,1094,1001,2024-04-04
+269,2001,2094,2024-04-05
+270,1001,1094,2024-04-06";
 $team = array(
 "2001" => "Hyundai Hillstate",
 "2002" => "Ex Hi-pass",
@@ -309,18 +309,22 @@ $numx=explode(",",$datax[$num]);
 $home=$numx[1];
 $away=$numx[2];
 $date=$numx[3];
-echo "$date $team[$home] vs $team[$away]<p>Note: t = try ; s = success ; f = fail ; e = error ; b = bounce back<p>";
+echo "$date $team[$home] vs $team[$away]<p>Note: t=try ; s=success ; f=foul ; e=error ; b=bounce back<p>";
 	$file="stat/".$num.".json";
 	if (file_exists($file)) {
 		$json=json_decode(file_get_contents($file),true);
 	}else{
-		$link="https://api.kovo.co.kr/api/game/playerRecord?season=020&gPart=201&gNum=$num&hTeamCode=$home&aTeamCode=$away";
+		if($num==254){$part="204";}
+		if($num >=255 && $num <= 260){$part="202";}
+		if($num >=261){$part="203";}
+		if($num <=252){$part="201";}
+		$link="https://api.kovo.co.kr/api/game/playerRecord?season=020&gPart=$part&gNum=$num&hTeamCode=$home&aTeamCode=$away";
+		//https://api.kovo.co.kr/api/game/playerRecord?season=020&gPart=204&gNum=254&hTeamCode=1008&aTeamCode=1005
 		$json=json_decode(file_get_contents($link),true);
+		//echo "PART = $part<p>";
 	}
 	//var_dump($json);
-	
-	
-$homerec=$json['result']['home']['playerRecord'];
+	$homerec=$json['result']['home']['playerRecord'];
 //var_dump($json2);
 $jumlah=count($homerec);
 //echo "<table><tr><td  style='text-align:top'>";
@@ -430,3 +434,6 @@ echo $team[$home].": "."Att $hteamattack, Blk $hteamblock, Ace $hteamace, Err $h
 echo $team[$away].": "."Att $ateamattack, Blk $ateamblock, Ace $ateamace, Err $ateamerror <p><pre>";
 
 //var_dump($json);
+
+
+
