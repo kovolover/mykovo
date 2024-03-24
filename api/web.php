@@ -1,14 +1,13 @@
 <?php
 
 $url=(parse_url($_SERVER['REQUEST_URI'])['path']);
-if($url=="/naver.php"){$title="Naver Sport Relay Downloader (720p) | @ecek2";}
-if($url=="/naver2.php"){$title="Naver Sport Video Downloader (1080p) | @ecek2";}
-if($url=="/naver.php"){$title="Naver Sport Relay Downloader (720p) | @ecek2";}
-if($url=="/klasemen.php"){$title="Klasemen Korean VLeague | @ecek2";}
-if($url=="/player.php"){$title="Ranking Player Women's Korean VLeagu | @ecek2";}
-if($url=="/hasil.php"){$title="Hasil Pertandingan Korean VLeague | @ecek2";}
-if($url=="/"){$title="Nonton Live Streaming Naver Sport | @ecek2";}
-if($url=="/team.php"){$title="Team | @ecek2";}
+if($url=="/naver.php"){$title="Naver Sport Relay Downloader (720p)";}
+if($url=="/naver2.php"){$title="Naver Sport Video Downloader (1080p)";}
+if($url=="/klasemen.php"){$title="Klasemen Korean VLeague";}
+if($url=="/player.php"){$title="Ranking Player Women's Korean VLeague";}
+if($url=="/hasil.php"){$title="Hasil Pertandingan Korean VLeague";}
+if($url=="/"){$title="Nonton Live Streaming Naver Sport";}
+if($url=="/team.php"){$title="Team";}
 
 
 $header='<!DOCTYPE html>
