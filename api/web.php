@@ -70,7 +70,7 @@ table, th, td {
 <body style="font-family:Verdana;">
 
 <div style="background-color:#e5e511;padding:15px;text-align:center;">
-  <h1>DOMAIN BARU YA, SILAKAN DIHAFAL<br><a href=http://saweria.co/agratv target=_blank>http://saweria.co/agratv</a></h1>
+  <h1>WELCOME</h1>
 </div>
 
 <div style="overflow:auto">
@@ -81,7 +81,6 @@ table, th, td {
     <a href="klasemen.php">Klasemen Kovo</a>
     <a href="player.php">Player Rank</a>
     <a href="hasil.php">Hasil Pertandingan</a>
-    <a href="http://saweria.co/agratv" target=_blank>Sawer</a>
     <a href="https://m.sports.naver.com/volleyball/schedule/index" target=_blank>Naver Volley</a>
   </div>
 
