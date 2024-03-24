@@ -83,7 +83,6 @@ table, th, td {
     <a href="player.php">Player Rank</a>
     <a href="hasil.php">Hasil Pertandingan</a>
     <a href="http://saweria.co/agratv" target=_blank>Sawer</a>
-    <a href="https://www.youtube.com/@Agra-Tube" target=_blank>Youtube</a>
     <a href="https://m.sports.naver.com/volleyball/schedule/index" target=_blank>Naver Volley</a>
   </div>
 
