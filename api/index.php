@@ -3,7 +3,7 @@
  echo $header;
  ?>
 <?php
-//echo "<h2>LIBUR DULU LAH< PADA GAK MAU NYAWER HAHAHAHAHAHA";exit;
+$footer='<p><script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-discussion="livesports_ID/389" data-comments-limit="5" data-color="29B127" data-dark-color="72E350"></script>'.$footer;
 ?>
 <script src="https://hlsjs.video-dev.org/dist/hls.js"></script>
 <script>
@@ -33,11 +33,12 @@ for($i=0;$i<$jumlah;$i++)
     $kategori=$json['result']['templates'][0]['json']['liveBoxList'][$i]['superCategoryId'];
     $gameid=$json['result']['templates'][0]['json']['liveBoxList'][$i]['gameId'];
     $jam=$json['result']['templates'][0]['json']['liveBoxList'][$i]['gameTimeHHmm'];
-    //echo "<a href='?id=$gameid'>$judul - $kategori - $jam</a><br>";
-    $onair=$json['result']['templates'][0]['json']['liveBoxList'][$i]['isOnAirTv'];
-    if($onair =="Y" || $onair =="N"){
-    echo "<a href='?id=$gameid'>$judul - $kategori - $jam</a><br>";
+    //echo "<a href='?id=$gameid'>$judul - $kategori - $jam </a><br>";
+	$onair=$json['result']['templates'][0]['json']['liveBoxList'][$i]['isOnAirTv'];
+	if($onair =="Y" || $onair =="N"){
+    echo "<a href='?id=$gameid'>$judul - $kategori - $jam - $onair</a><br>";
     }
+    
     
 }
 echo "<p>";
