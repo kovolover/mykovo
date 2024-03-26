@@ -3,7 +3,7 @@
  echo $header;
  ?>
 <?php
-$footer='<p><script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-discussion="livesports_ID/389" data-comments-limit="5" data-color="29B127" data-dark-color="72E350"></script>'.$footer;
+//$footer='<p><script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-discussion="livesports_ID/389" data-comments-limit="5" data-color="29B127" data-dark-color="72E350"></script>'.$footer;
 ?>
 <script src="https://hlsjs.video-dev.org/dist/hls.js"></script>
 <script>
