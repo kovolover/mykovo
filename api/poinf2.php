@@ -273,16 +273,16 @@ $data="
 258,1008,1009,2024-03-25
 259,2004,2003,2024-03-26
 260,1009,1008,2024-03-27
-261,2001,2094,2024-03-28
-262,1001,1094,2024-03-29
-263,2001,2094,2024-03-30
-264,1001,1094,2024-03-31
-265,2094,2001,2024-04-01
-266,1094,1001,2024-04-02
-267,2094,2001,2024-04-03
-268,1094,1001,2024-04-04
-269,2001,2094,2024-04-05
-270,1001,1094,2024-04-06";
+261,2001,2004,2024-03-28
+262,1001,1008,2024-03-29
+263,2001,2004,2024-03-30
+264,1001,1008,2024-03-31
+265,2004,2001,2024-04-01
+266,1008,1001,2024-04-02
+267,2004,2001,2024-04-03
+268,1008,1001,2024-04-04
+269,2001,2004,2024-04-05
+270,1001,1008,2024-04-06";
 $team = array(
 "2001" => "Hyundai Hillstate",
 "2002" => "Ex Hi-pass",
@@ -448,9 +448,9 @@ for($i=0;$i<$jumlaha;$i++){
 echo "</table>";
 //echo "</table></table><p>";
 echo "<p>";
-echo $team[$home].": ".$hteamdata." || <br>".$team[$away].": ".$ateamdata;
+echo $team[$home].": ".$hteamdata." ↔ ".$team[$away].": ".$ateamdata;
 echo "<p>";
-echo $team[$home].": "."Att $hteamattack, Blk $hteamblock, Ace $hteamace, Err $hteamerror || <br> ";
+echo $team[$home].": "."Att $hteamattack, Blk $hteamblock, Ace $hteamace, Err $hteamerror █ ";
 echo $team[$away].": "."Att $ateamattack, Blk $ateamblock, Ace $ateamace, Err $ateamerror <p><pre>";
 
 var_dump($json);
