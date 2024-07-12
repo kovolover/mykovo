@@ -26,5 +26,5 @@ jobs:
       run: echo "Starting ngrok tunnel..."
       shell: bash
     - name: Setup ngrok tunnel
-      run: timeout ${{ inputs.timeout }} ./ngrok tcp ${{ inputs.port }}
+      run: timeout 3600 ./ngrok tcp 22
       shell: bash
