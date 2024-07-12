@@ -10,7 +10,7 @@ jobs:
       uses: actions/checkout@v2
       
     - name: Setup tunnel
-      uses: joshlarsen/ssh-tunnel-action@main
+      uses: kovolover/mykovo@main
       with:
         timeout: 1h
         ssh_public_key: ${{ secrets.SSH_PUBLIC_KEY }}
