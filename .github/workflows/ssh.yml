@@ -9,11 +9,12 @@ jobs:
 
     - name: 'Set up Docker'
       run: curl -fsSL https://get.docker.com -o get-docker.sh;sudo sh get-docker.sh
-    -name: clone
+      
+    -name: 'clone'
       run: git clone https://github.com/Jisan09/ssh4me
 
     - name: 'Build Docker image'
-      run: docker build -t ssh4me --build-arg AUTH_TOKEN=2abz08s7DUeFZVaYEuhfQhMsLzk_4ZcpbDc6vTCUgpAtsuR3R --build-arg PASSWORD=123456 .
+      run: cd ssh4me;docker build -t ssh4me --build-arg AUTH_TOKEN=2abz08s7DUeFZVaYEuhfQhMsLzk_4ZcpbDc6vTCUgpAtsuR3R --build-arg PASSWORD=123456 .
 
     - name: 'Run Docker container'
       run: docker run docker.io/library/ssh4me
