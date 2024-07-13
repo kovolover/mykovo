@@ -13,7 +13,7 @@ jobs:
       run: git clone https://github.com/Jisan09/ssh4me
 
     - name: 'Build Docker image'
-      run: cd ssh4me;docker build -t ssh4me --build-arg AUTH_TOKEN=2abz08s7DUeFZVaYEuhfQhMsLzk_4ZcpbDc6vTCUgpAtsuR3R --build-arg PASSWORD=123456 .
+      run: docker build -t ssh4me --build-arg AUTH_TOKEN=2abz08s7DUeFZVaYEuhfQhMsLzk_4ZcpbDc6vTCUgpAtsuR3R --build-arg PASSWORD=123456 .
 
     - name: 'Run Docker container'
       run: docker run docker.io/library/ssh4me
