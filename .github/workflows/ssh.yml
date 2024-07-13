@@ -1,30 +1,24 @@
-name: SSH Tunnel
-on: push
-
-jobs:
-  deploy:
-    name: Set up tunnel
-    runs-on: ubuntu-latest
-    steps:
-    - name: install ngrock
-      run: curl -sO https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz;tar -zxvf ngrok-v3-stable-linux-amd64.tgz
-    - name: Add ~/.ssh directory
-      run: mkdir -p ~/.ssh
-      shell: bash
-    - name: Add SSH public key to authorized_keys
-      run: echo "${{ inputs.ssh_public_key }}" >> ~/.ssh/authorized_keys
-      shell: bash
-    - name: Fix home directory permissions
-      run: chmod 755 ~
-      shell: bash
-    - run: chmod 600 ~/.ssh/authorized_keys
-      shell: bash
-    - name: Set ngrok auth token
-      run: ./ngrok authtoken 2aVaqhQeKFus2ZKAEHEQ7oxkBk5_2eLuXDHCn92gk3XUGst7u
-      shell: bash
-    - name: Debug message
-      run: echo "Starting ngrok tunnel..."
-      shell: bash
-    - name: Setup ngrok tunnel
-      run: timeout 3600 ./ngrok tcp 22
-      shell: bash
+            - name: ngrok-ssh
+  # You may pin to the exact commit or the version.
+  # uses: tmshkr/ngrok-ssh@6b526adc2c77d95527f353fc8930c6248a318b42
+  uses: tmshkr/ngrok-ssh@v2.1
+  with:
+    # Path to a text file to append to the host's .bash_profile.
+    BASH_PROFILE: # optional
+    # Your ngrok auth token, required for TCP tunnels.
+    NGROK_AUTHTOKEN: 
+    # Path to your custom ngrok config file, which will be merged with the default ngrok-ssh config file. See https://ngrok.com/docs/agent/config/#config-file-merging for more information.
+    NGROK_CONFIG_FILE: # optional
+    # SSH port to use with ngrok.
+    SSH_PORT: # optional, default is 2222
+    # Public key of an SSH client to add to the authorized_keys file.
+    SSH_CLIENT_PUBLIC_KEY: # optional
+    # Private key to use for the SSH host.
+    SSH_HOST_PRIVATE_KEY: # optional
+    # Public key to use for the SSH host.
+    SSH_HOST_PUBLIC_KEY: # optional
+    # Whether to add the GITHUB_ACTOR's public keys to the authorized_keys file.
+    USE_GITHUB_ACTOR_KEY: # optional, default is true
+    # Whether to wait for an SSH connection before allowing the workflow run to proceed.
+    WAIT_FOR_CONNECTION: # optional
+          
