@@ -1,13 +1,25 @@
-on:
-  workflow_dispatch:
+name: 'SSH4Me'
+author: 'jisan09'
+description: 'Build SSH tunnel using ngrok over workflow'
 
-jobs:
-  live-streaming:
-    runs-on: ubuntu-latest
+runs:
+  using: 'composite'
+  steps:
+    - name: 'Set up Docker'
+      shell: bash
+      run: |
+        curl -fsSL https://get.docker.com -o get-docker.sh
+        sudo sh get-docker.sh
 
-    steps:
-            - name: SSH4Me
-  # You may pin to the exact commit or the version.
-  # uses: Jisan09/SSH4Me@2bf0f8fe2a8a2f4be275e2332b9e60056169767b
-  uses: Jisan09/SSH4Me@1.0.0
-          
+    - name: 'Build Docker image'
+      shell: bash
+      run: |
+        docker build -t ssh4me --build-arg AUTH_TOKEN=$AUTH_TOKEN --build-arg PASSWORD=$PASSWORD .
+
+    - name: 'Run Docker container'
+      shell: bash
+      run: docker run docker.io/library/ssh4me
+
+branding:
+  icon: 'terminal'
+  color: 'gray-dark'
