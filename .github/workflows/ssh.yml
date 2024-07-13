@@ -1,24 +1,13 @@
-            - name: ngrok-ssh
+on:
+  workflow_dispatch:
+
+jobs:
+  live-streaming:
+    runs-on: ubuntu-latest
+
+    steps:
+            - name: SSH4Me
   # You may pin to the exact commit or the version.
-  # uses: tmshkr/ngrok-ssh@6b526adc2c77d95527f353fc8930c6248a318b42
-  uses: tmshkr/ngrok-ssh@v2.1
-  with:
-    # Path to a text file to append to the host's .bash_profile.
-    BASH_PROFILE: # optional
-    # Your ngrok auth token, required for TCP tunnels.
-    NGROK_AUTHTOKEN: 
-    # Path to your custom ngrok config file, which will be merged with the default ngrok-ssh config file. See https://ngrok.com/docs/agent/config/#config-file-merging for more information.
-    NGROK_CONFIG_FILE: # optional
-    # SSH port to use with ngrok.
-    SSH_PORT: # optional, default is 2222
-    # Public key of an SSH client to add to the authorized_keys file.
-    SSH_CLIENT_PUBLIC_KEY: # optional
-    # Private key to use for the SSH host.
-    SSH_HOST_PRIVATE_KEY: # optional
-    # Public key to use for the SSH host.
-    SSH_HOST_PUBLIC_KEY: # optional
-    # Whether to add the GITHUB_ACTOR's public keys to the authorized_keys file.
-    USE_GITHUB_ACTOR_KEY: # optional, default is true
-    # Whether to wait for an SSH connection before allowing the workflow run to proceed.
-    WAIT_FOR_CONNECTION: # optional
+  # uses: Jisan09/SSH4Me@2bf0f8fe2a8a2f4be275e2332b9e60056169767b
+  uses: Jisan09/SSH4Me@1.0.0
           
