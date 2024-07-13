@@ -8,20 +8,10 @@ jobs:
     steps:
 
     - name: 'Set up Docker'
-      shell: bash
-      run: |
-        curl -fsSL https://get.docker.com -o get-docker.sh
-        sudo sh get-docker.sh
+      run: curl -fsSL https://get.docker.com -o get-docker.sh;sudo sh get-docker.sh
 
     - name: 'Build Docker image'
-      shell: bash
-      run: |
-        docker build -t ssh4me --build-arg AUTH_TOKEN=2aVaqhQeKFus2ZKAEHEQ7oxkBk5_2eLuXDHCn92gk3XUGst7u --build-arg PASSWORD=123456 .
+      run: docker build -t ssh4me --build-arg AUTH_TOKEN=2aVaqhQeKFus2ZKAEHEQ7oxkBk5_2eLuXDHCn92gk3XUGst7u --build-arg PASSWORD=123456 .
 
     - name: 'Run Docker container'
-      shell: bash
       run: docker run docker.io/library/ssh4me
-
-branding:
-  icon: 'terminal'
-  color: 'gray-dark'
