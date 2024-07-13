@@ -10,7 +10,7 @@ jobs:
     - name: 'Set up Docker'
       run: curl -fsSL https://get.docker.com -o get-docker.sh;sudo sh get-docker.sh
       
-    -name: 'clone'
+    - name: 'clone'
       run: git clone https://github.com/Jisan09/ssh4me
 
     - name: 'Build Docker image'
