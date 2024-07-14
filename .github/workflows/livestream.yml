@@ -11,4 +11,4 @@ jobs:
       - name: id pwd uname
         run: id;pwd;uname -a;ls -al
       - name: live stream
-        run: ffmpeg -hide_banner -loglevel error -user_agent "Mozilla/5.0" -i "https://etslive-v3-vidio-com-tokenized.akamaized.net/hls-p/ingest_17252_1080p/hdntl=exp=1720885431~acl=%2f*~id=allUsers~data=hdntl~hmac=508d27a580d887d15e53273d5a91611ea4623d19ce4361cdeda8e45e146d995b/index.m3u8" -c copy -f flv rtmps://fa723fc1b171.global-contribute.live-video.net:443/app/sk_us-west-2_xFRVgfONJY7d_jWpOnJNiy39EYsXoEXsAyu7i7UxDlA
+        run: ffmpeg -hide_banner -loglevel error -stream_loop -1 -re -i "https://github.com/kovolover/mykovo/raw/main/proliga.mp4" -c copy -f flv  rtmp://a.rtmp.youtube.com/live2/mkrd-3ry7-e10e-z30d-8hr4
