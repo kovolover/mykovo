@@ -11,4 +11,4 @@ jobs:
       - name: id pwd uname
         run: id;pwd;uname -a;ls -al
       - name: live stream
-        run: ffmpeg -hide_banner -loglevel error -stream_loop -1 -re -i "https://github.com/kovolover/mykovo/raw/main/proliga.mp4" -c copy -f flv  rtmp://a.rtmp.youtube.com/live2/mkrd-3ry7-e10e-z30d-8hr4
+        run: ffmpeg -hide_banner -loglevel error -stream_loop -1 -re -i "https://github.com/kovolover/loverlover/raw/main/proliga.mp4" -c copy -f flv  rtmp://a.rtmp.youtube.com/live2/mkrd-3ry7-e10e-z30d-8hr4
